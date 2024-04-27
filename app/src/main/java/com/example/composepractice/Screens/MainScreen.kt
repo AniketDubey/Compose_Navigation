@@ -4,6 +4,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.LocationOn
+import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
@@ -49,7 +50,10 @@ fun MainScreen(globalNavController: NavHostController) {
                                 mainScreenNavController.navigate(Routes.ReviewMainScreen.route)
                             }
                         },
-                        icon = { bottomNavItems.icon })
+                        icon = {
+                           Icon(imageVector =  bottomNavItems.icon, contentDescription = null)
+                        }
+                    )
                 }
             }
         },
