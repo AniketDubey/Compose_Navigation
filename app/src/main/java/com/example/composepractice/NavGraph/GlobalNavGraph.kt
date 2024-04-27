@@ -50,7 +50,7 @@ fun GlobalNavGraph() {
             route = Routes.InsideReviewNav.route,
             startDestination = Routes.InsideReviewScreen.route
         ) {
-            composable(route = Routes.InsideExploreScreen.route) {
+            composable(route = Routes.InsideReviewScreen.route) {
                 InsideReviewScreen()
             }
         }

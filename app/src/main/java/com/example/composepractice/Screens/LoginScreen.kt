@@ -18,7 +18,15 @@ fun LoginScreen(globalNavController: NavHostController) {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Button(onClick = { globalNavController.navigate(Routes.MainScreenNav.route) }) {
+        Button(
+            onClick = {
+                globalNavController.navigate(Routes.MainScreenNav.route){
+                    popUpTo(Routes.ParentNav.route){
+                        inclusive = true
+                    }
+                }
+            },
+        ) {
             Text(text = "Login Screen")
         }
     }
