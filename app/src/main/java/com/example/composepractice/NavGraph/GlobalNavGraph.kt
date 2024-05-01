@@ -7,9 +7,9 @@ import androidx.navigation.compose.navigation
 import androidx.navigation.compose.rememberNavController
 import com.example.composepractice.Models.Routes
 import com.example.composepractice.Screens.InsideExploreScreen
-import com.example.composepractice.Screens.InsidePlanScreen
+import com.example.composepractice.Screens.InsideAccountScreen
 import com.example.composepractice.Screens.InsideReviewScreen
-import com.example.composepractice.Screens.LoginScreen
+import com.example.composepractice.Screens.Auth.LoginScreen
 import com.example.composepractice.Screens.MainScreen
 
 @Composable
@@ -38,11 +38,11 @@ fun GlobalNavGraph() {
         }
 
         navigation(
-            route = Routes.InsidePlanNav.route,
-            startDestination = Routes.InsidePlanScreen.route
+            route = Routes.InsideAccountNav.route,
+            startDestination = Routes.InsideAccountScreen.route
         ) {
-            composable(route = Routes.InsidePlanScreen.route) {
-                InsidePlanScreen()
+            composable(route = Routes.InsideAccountScreen.route) {
+                InsideAccountScreen()
             }
         }
 

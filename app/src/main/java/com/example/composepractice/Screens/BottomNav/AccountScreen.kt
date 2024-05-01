@@ -1,4 +1,4 @@
-package com.example.composepractice.Screens
+package com.example.composepractice.Screens.BottomNav
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -12,14 +12,14 @@ import androidx.navigation.NavHostController
 import com.example.composepractice.Models.Routes
 
 @Composable
-fun PlanScreen(globalNavController: NavHostController) {
+fun AccountScreen(globalNavController: NavHostController) {
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Button(onClick = { globalNavController.navigate(Routes.InsidePlanNav.route) }) {
-            Text(text = "Plan Screen")
+        Button(onClick = { globalNavController.navigate(Routes.InsideAccountNav.route) }) {
+            Text(text = "Account Screen")
         }
     }
 }

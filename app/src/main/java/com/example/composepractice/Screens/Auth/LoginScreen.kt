@@ -1,4 +1,4 @@
-package com.example.composepractice.Screens
+package com.example.composepractice.Screens.Auth
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -12,14 +12,22 @@ import androidx.navigation.NavHostController
 import com.example.composepractice.Models.Routes
 
 @Composable
-fun ExploreScreen(globalNavController: NavHostController) {
+fun LoginScreen(globalNavController: NavHostController) {
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Button(onClick = { globalNavController.navigate(Routes.InsideExploreNav.route) }) {
-            Text(text = "Explore Screen")
+        Button(
+            onClick = {
+                globalNavController.navigate(Routes.MainScreenNav.route){
+                    popUpTo(Routes.ParentNav.route){
+                        inclusive = true
+                    }
+                }
+            },
+        ) {
+            Text(text = "Login Screen")
         }
     }
 }

@@ -6,9 +6,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
 import com.example.composepractice.Models.Routes
-import com.example.composepractice.Screens.ExploreScreen
-import com.example.composepractice.Screens.PlanScreen
-import com.example.composepractice.Screens.ReviewScreen
+import com.example.composepractice.Screens.BottomNav.ExploreScreen
+import com.example.composepractice.Screens.BottomNav.AccountScreen
+import com.example.composepractice.Screens.BottomNav.ReviewScreen
 
 @Composable
 fun MainScreenNavGraph(
@@ -21,10 +21,10 @@ fun MainScreenNavGraph(
     ) {
         navigation(
             route = Routes.MainScreenNav.route,
-            startDestination = Routes.PlanMainScreen.route
+            startDestination = Routes.ExploreMainScreen.route
         ) {
-            composable(route = Routes.PlanMainScreen.route) {
-                PlanScreen(globalNavController)
+            composable(route = Routes.AccountMainScreen.route) {
+                AccountScreen(globalNavController)
             }
             composable(route = Routes.ExploreMainScreen.route) {
                 ExploreScreen(globalNavController)
