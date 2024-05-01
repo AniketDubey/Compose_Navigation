@@ -8,6 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.composepractice.Screens.ExploreScreenComposable.ExploreList.ExploreMountainsList
+import com.example.composepractice.Screens.ExploreScreenComposable.ExploreList.ExploreStarList
 import com.example.composepractice.Screens.ExploreScreenComposable.ExploreList.ExploreValleysList
 
 @Composable
@@ -19,8 +20,8 @@ fun ExploreListComposable() {
     ) {
         ExploreMountainsList()
         ExploreValleysList()
-        /*ExploreStarsList()
-    ExploreAdventureSportsList()
+        ExploreStarList()
+    /*ExploreAdventureSportsList()
     TopRecommended()
     ExploreCityList()*/
     }
