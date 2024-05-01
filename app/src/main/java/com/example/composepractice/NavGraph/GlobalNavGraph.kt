@@ -15,7 +15,7 @@ import com.example.composepractice.Screens.MainScreen
 @Composable
 fun GlobalNavGraph() {
     val globalNavController = rememberNavController()
-    NavHost(navController = globalNavController, startDestination = Routes.ParentNav.route) {
+    NavHost(navController = globalNavController, startDestination = Routes.MainScreenNav.route) {
         navigation(route = Routes.ParentNav.route, startDestination = Routes.LoginScreen.route) {
             composable(route = Routes.LoginScreen.route) {
                 LoginScreen(globalNavController)
