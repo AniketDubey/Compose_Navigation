@@ -15,8 +15,8 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -25,9 +25,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.composepractice.CommonUI.BoldText
+import com.example.composepractice.CommonUI.RegularText
 import com.example.composepractice.Models.BasicExplore.BasicExplore
 import com.example.composepractice.R
 
@@ -41,11 +42,9 @@ fun HeaderComposable() {
     ) {
         Column {
             AccountIconComposable()
-            Text(
+            BoldText(
                 text = "Explore",
-                color = Color.Black,
-                fontSize = 30.sp,
-                fontWeight = FontWeight.Bold,
+                textSize = 30.sp,
                 modifier = Modifier.padding(vertical = 8.dp)
             )
             BasicThingsToExploreComposable()
@@ -61,9 +60,17 @@ fun BasicThingsToExploreComposable() {
             BasicExplore(icon = painterResource(id = R.drawable.culture_icon), title = "Culture")
         )
 
-    Row(horizontalArrangement = Arrangement.SpaceBetween, modifier = Modifier.fillMaxWidth()) {
+    Row(
+        horizontalArrangement = Arrangement.SpaceBetween,
+        modifier = Modifier.fillMaxWidth()
+    ) {
         exploreList.forEach {
-            Card(shape = RoundedCornerShape(30.dp)) {
+            Card(
+                shape = RoundedCornerShape(30.dp),
+                colors = CardDefaults.cardColors(
+                    Color.White
+                )
+            ) {
                 Row(
                     horizontalArrangement = Arrangement.Start,
                     verticalAlignment = Alignment.CenterVertically,
@@ -77,7 +84,7 @@ fun BasicThingsToExploreComposable() {
                         modifier = Modifier.size(18.dp)
                     )
                     Spacer(modifier = Modifier.width(8.dp))
-                    Text(text = it.title, fontSize = 16.sp)
+                    RegularText(text = it.title)
                 }
             }
         }
