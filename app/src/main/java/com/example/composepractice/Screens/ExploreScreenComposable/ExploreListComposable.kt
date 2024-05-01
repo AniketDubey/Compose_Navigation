@@ -19,7 +19,7 @@ fun ExploreListComposable() {
     ) {
         ExploreMountainsList()
         ExploreValleysList()
-        /*ExploreStartsList()
+        /*ExploreStarsList()
     ExploreAdventureSportsList()
     TopRecommended()
     ExploreCityList()*/
@@ -42,7 +42,7 @@ fun TopRecommended() {
 }
 
 @Composable
-fun ExploreStartsList() {
+fun ExploreStarsList() {
     TODO("Not yet implemented")
 }
 
